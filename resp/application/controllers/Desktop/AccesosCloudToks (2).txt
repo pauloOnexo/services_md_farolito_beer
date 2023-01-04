@@ -1,0 +1,77 @@
+﻿-----------------------------------
+Accesos Cloud TOKS
+-----------------------------------
+--- Oracle Cloud (Fusion) ---
+Desarrollo: http://eioq-dev1.fa.us2.oraclecloud.com/
+dev:
+Usuario: 103840 
+Contraseña: jrh302019
+
+dev3:
+0055
+Oracle123
+
+
+Calidad: https://eioq-test.fa.us2.oraclecloud.com
+Test:
+103840 / Tr@ppers1108
+
+
+
+-------- OACS (Oracle Analytics Cloud Services) ---------
+https://toksoacsdev-toksopc.analytics.ocp.oraclecloud.com/dv/ui?pageid=home
+ratongl80@hotmail.com
+2019_Noviembre15_Cloud
+
+-------- OIC (Oracle Integration Cloud Services) ---------
+ 
+ratongl80@hotmail.com
+2020_Marzo13_Cloud
+
+visual builder 
+https://toksoacsdev-toksopc.analytics.ocp.oraclecloud.com/dv/ui?pageid=home
+https://toksdevaic-toksopc.integration.ocp.oraclecloud.com/ic/home/
+rodrigo.trejo@eks-solutions.com
+Ligurepri86.
+--
+
+-- Accesos a APEX (Oracle Application Express) --- APEX
+https://toksjcsdev.toksopc.grupotoks.com.mx:7002/ords
+ESQUEMA: EKS DEVELOPMENT
+ratongl80@hotmail.com
+2020_Enero_Apex
+2020_Abril_Apex
+--
+esquema:    SCM
+usuario:    ratongl80@hotmail.com
+contraseña: 2020_01_Abril_Apex
+--
+
+-- Accesos a WMS (LogFire) ---
+https://ta11.wms.ocs.oraclecloud.com/toks_test/index/
+Usuario: WEBREPORTS
+Contraseña: desarrollador1
+
+-------------------------------------------------------------------
+
+---- Conexion a Base de Datos HYPERFORMANCE (APEX) con SQL Developer----
+--- TNSNAMES ---
+TOKSDBDV_PDB1 =
+  (DESCRIPTION =
+    (ADDRESS = (PROTOCOL = TCP)(HOST = toksdbdev.toksopc.grupotoks.com.mx)(PORT = 12051))
+    (CONNECT_DATA =
+      (SERVER = DEDICATED)
+      (SERVICE_NAME = toksdbdv_pdb1.toksdevpvtsub.toksvcndev.oraclevcn.com)
+    )
+  )
+
+--- Datos de Conexion ---
+usuarios: EKS					
+contraseña: T0k$_h1Gh_P3rF_3K$_2019#
+
+--- Datos de Conexion SFTP ---
+Servidor: toksdevsftp.toksopc.grupotoks.com.mx
+user: dti_user
+File: Adjunto <dti_user_vmdev.ppk>
+File pass: Dt1_sFtP_Us3r_2019
+ 

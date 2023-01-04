@@ -1,0 +1,10 @@
+A Database Error Occurred
+Error Number: 1054
+
+Unknown column 'vigencia' in 'field list'
+
+select * from (select a.cantidad_x_porcion,a.orden,215 ,a.extra,a.etiqueta_extra,a.numero_opciones ,a.id id_articulo,a.platillo,a.nombre nombre_articulo,a.descripcion descripcion_articulo,a.simbologia,a.logo,a.id_subcategoria,a.id_experiencia, a.ubicacion ubicacion_articulo,IF(a.imagen_min IS NULL OR a.imagen_min = '' or a.imagen_min = '/menudigital/Articulos/','',CONCAT('/menudigital/Articulos/',a.imagen_min)) ubicacion_articulo_min,(case when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215) in (1)then ROUND(a.precio_nacional ) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 2 then ROUND(a.precio_acapulco ) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 3 then ROUND(a.precio_cc ) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 4 then ROUND(a.precio_tijuana ) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 5 then ROUND(a.precio_pl ) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 6 then ROUND(a.precio_aeropuerto) when (select b.id_precio from Sucursal a join Region b on a.id_region = b.id where a.id = 215)= 7 then ROUND(a.precio_tezontle) end ) precio,e.nombre nombre_experiencia, e.descripcion descripcion_experiencia,e.ubicacion ubicacion_experiencia, a.descripcion_imagen,a.detalle_imagen,vigencia,fechainicio,fechafin from Articulo a left join Experiencia e on a.id_experiencia = e.id where (a.activo = 1 and a.id_subcategoria = 64 and vigencia <> 1) or (a.vigencia = 1 and a.activo = 1 and CURDATE() between a.fechainicio and fechafin and a.id_subcategoria = 64 ) )t0 where precio > 0 order by orden
+
+Filename: models/Articulo_model.php
+
+Line Number: 854

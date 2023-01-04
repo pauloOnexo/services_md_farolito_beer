@@ -1,0 +1,27 @@
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_nacional = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_acapulco = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_cc = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_tijuana = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_pl = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_aeropuerto = bf_precios_nov.precio_nacional;
+
+UPDATE articulo
+INNER JOIN bf_precios_nov ON articulo.id = bf_precios_nov.id_producto
+SET articulo.precio_tezontle = bf_precios_nov.precio_nacional;

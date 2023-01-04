@@ -1,0 +1,31 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+#RewriteBase /
+#### PERSISTENT CONTENT ####
+#DirectoryIndex index.php index.cgi index.html
+#RewriteCond %{REQUEST_FILENAME} !-f [OR]
+#RewriteCond %{REQUEST_URI} ^\/(js\/main\.js|css\/(\d+|common|site)\.css)$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#### not match sub module
+#RewriteRule ^((?!react).)*$ /$1 [L,QSA]
+
+#### This is for sub module
+#RewriteEngine On
+#RewriteBase /react/
+#RewriteRule ^index\.html$ - [L]
+#RewriteCond %{REQUEST_FILENAME} !-f [OR]
+#RewriteCond %{REQUEST_URI} ^\/(js\/main\.js|css\/(\d+|common|site)\.css)$
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteRule ^((react).*)*$ /react/index.html [L,QSA]
+</IfModule>
+allow from all
+
+#### This is for force download QRs
+<FilesMatch "\.(JPEG|jpeg|jpg)$">
+ForceType application/octet-stream
+Header set Content-Disposition attachment
+</FilesMatch>
